@@ -21,9 +21,9 @@ class StudentServiceTest {
     @Test
     void testSaveAndGetStudent() {
         Student student = new Student(null, null, 0, 0);
-        student.setName("John Doe");
-        student.setAge(25);
-        student.setSalary(50000.0);
+        student.setName("virat kohli");
+        student.setAge(35);
+        student.setSalary(500000.0);
 
         // Save student
         Student savedStudent = studentService.saveStudent(student);
@@ -31,9 +31,9 @@ class StudentServiceTest {
 
         // Retrieve student by ID
         Student retrievedStudent = studentService.getStudentById(savedStudent.getId());
-        assertEquals("John Doe", retrievedStudent.getName());
-        assertEquals(25, retrievedStudent.getAge());
-        assertEquals(50000.0, retrievedStudent.getSalary());
+        assertEquals("virat kohli", retrievedStudent.getName());
+        assertEquals(35, retrievedStudent.getAge());
+        assertEquals(500000.0, retrievedStudent.getSalary());
 
         // Clean up
         studentService.deleteStudent(savedStudent.getId());
